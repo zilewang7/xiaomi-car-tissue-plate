@@ -1,0 +1,32 @@
+{
+ "pivot_x": -49.21,
+ "lever_tab": 88.42,
+ "lever_hand": 142.71,
+ "pad_mean_radius": 59.056285051433626,
+ "rows": {
+  "v3.2 weakest": {
+   "peak_N": 2.5429892050597243,
+   "magnets_only_N": 1.3292060563736263
+  },
+  "v3.2 typical": {
+   "peak_N": 3.733180080877412,
+   "magnets_only_N": 2.049015330430152
+  },
+  "v3.2 strongest": {
+   "peak_N": 6.750537022163897,
+   "magnets_only_N": 3.5722206677024086
+  },
+  "v3.3 weakest": {
+   "peak_N": 4.469313479757401,
+   "magnets_only_N": 2.616783511511861
+  },
+  "v3.3 typical": {
+   "peak_N": 6.619648541221781,
+   "magnets_only_N": 4.036699155067824
+  },
+  "v3.3 strongest": {
+   "peak_N": 11.633844144076091,
+   "magnets_only_N": 7.617074926334969
+  }
+ }
+}

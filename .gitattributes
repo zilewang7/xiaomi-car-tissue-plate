@@ -1,0 +1,4 @@
+# Start scripts keep the line endings their platform needs, whatever core.autocrlf says (webui design 8)
+*.cmd text eol=crlf
+*.sh text eol=lf
+*.command text eol=lf

@@ -1,0 +1,560 @@
+{
+ "package_statics_v32": {
+  "documented gestures, worst margin (80 C weakest)": 2.4412,
+  "vertical press on a corner, worst margin (80 C weakest)": 4.1666,
+  "pinch capacity / switching torque (80 C weakest)": 4.3243,
+  "braking (80 C weakest, g)": 3.4931,
+  "lift-off needs downward acceleration (80 C weakest, g)": 3.2993,
+  "forward-lean limits (80 C weakest, deg)": {
+   "next = cabin corner fwd lean @1.5x": 44.4,
+   "next = cabin corner fwd lean @1.0x": 47.2,
+   "prev = windshield corner fwd lean @1.5x": 46.3,
+   "prev = windshield corner fwd lean @1.0x": ">50"
+  },
+  "push forward on the prism top (80 C weakest / 20 C typical / no pads, N)": [
+   2.2837,
+   3.6436,
+   1.4675
+  ],
+  "lateral (80 C weakest, g)": 3.6058,
+  "vertical press force needed at 20 C (N)": 4.5019
+ },
+ "rows": {
+  "v3.2 package via this code": {
+   "documented": 2.4411757285266047,
+   "vertical": 4.166607302337277,
+   "pinch": 4.324284464554893,
+   "pinch_Nmm": 167.72643686432664,
+   "switch_torque": 38.78709604771365,
+   "braking_g": 3.4931268997192713,
+   "lift_off_g": 3.2993273662150226,
+   "lateral_g": 3.605801937496422,
+   "push_top_fwd_mid_N": 2.283684753776874,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": 44.4,
+    "next = cabin corner fwd lean @1.0x": 47.2,
+    "prev = windshield corner fwd lean @1.5x": 46.3,
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 5.573311827070005,
+    "lift_off_g": 4.9642199620690715,
+    "pinch_Nmm": 274.9897192983437,
+    "push_top_fwd_mid_N": 3.6436372376128023
+   },
+   "hot90": {
+    "braking_g": 3.422629201814164,
+    "lift_off_g": 3.2405756797380016
+   },
+   "mu_box_low": {
+    "lift_off_g": 2.970202260445812,
+    "pinch_Nmm": 146.74688846936914
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 1.4674708542905777,
+    "lift_off_g": 3.2885328673788567
+   },
+   "tab_pull_80C": 1.8689649194961677,
+   "tab_down_80C": 0.6299098449600878,
+   "weight_N": 0.9671042561155856,
+   "mass_g": 98.58351234613514,
+   "cog": [
+    13.220047644696802,
+    7.544233880357247,
+    8.167673572843333
+   ]
+  },
+  "v3.2 on the real box (lid -9.0)": {
+   "documented": 2.81389975759526,
+   "vertical": 4.843692605014693,
+   "pinch": 5.006895811548764,
+   "pinch_Nmm": 194.20294874343713,
+   "switch_torque": 38.78709604771365,
+   "braking_g": 3.9503686836511376,
+   "lift_off_g": 3.8467083842780667,
+   "lateral_g": 4.179630128180831,
+   "push_top_fwd_mid_N": 2.582613513232723,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": 45.0,
+    "next = cabin corner fwd lean @1.0x": 47.9,
+    "prev = windshield corner fwd lean @1.5x": 48.2,
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 6.526131947304946,
+    "lift_off_g": 6.113447024631858,
+    "pinch_Nmm": 330.2995785423481,
+    "push_top_fwd_mid_N": 4.266557859777217
+   },
+   "hot90": {
+    "braking_g": 3.8681876881310466,
+    "lift_off_g": 3.7739701909515673
+   },
+   "mu_box_low": {
+    "lift_off_g": 3.4886244698957274,
+    "pinch_Nmm": 170.4869883523052
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 1.6157639761834084,
+    "lift_off_g": 3.8325741812319603
+   },
+   "tab_pull_80C": 2.0355995677124024,
+   "tab_down_80C": 0.874966342263915,
+   "weight_N": 0.9671042561155856,
+   "mass_g": 98.58351234613514,
+   "cog": [
+    13.220047644696802,
+    7.544233880357247,
+    8.167673572843333
+   ]
+  },
+  "v3.3 du 1.25": {
+   "documented": 4.6100141797925085,
+   "vertical": 8.170714644581503,
+   "pinch": 7.995052909140749,
+   "pinch_Nmm": 310.10497492375316,
+   "switch_torque": 38.78710728345649,
+   "braking_g": 7.404921823932171,
+   "lift_off_g": 5.7458288453650015,
+   "lateral_g": 6.567913554197926,
+   "push_top_fwd_mid_N": 4.980486931847103,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": 48.9,
+    "next = cabin corner fwd lean @1.0x": ">50",
+    "prev = windshield corner fwd lean @1.5x": ">50",
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 12.624748326362596,
+    "lift_off_g": 9.38267256761369,
+    "pinch_Nmm": 529.9476461020361,
+    "push_top_fwd_mid_N": 8.491297484612504
+   },
+   "hot90": {
+    "braking_g": 7.234477355576306,
+    "lift_off_g": 5.624564925971245
+   },
+   "mu_box_low": {
+    "lift_off_g": 5.037890080887075,
+    "pinch_Nmm": 265.5181480710661
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 3.5677390660052377,
+    "lift_off_g": 5.726041282399847
+   },
+   "tab_pull_80C": 4.147252315520157,
+   "tab_down_80C": 1.2898817099006303,
+   "weight_N": 1.0052974300873099,
+   "mass_g": 102.47680225150967,
+   "cog": [
+    12.719426604140557,
+    7.115036125387608,
+    7.563890645071151
+   ]
+  },
+  "v3.3 du 1.75": {
+   "documented": 4.6831833244716075,
+   "vertical": 8.376616466653116,
+   "pinch": 8.171631374185475,
+   "pinch_Nmm": 316.953942791391,
+   "switch_torque": 38.78710728345649,
+   "braking_g": 7.435916759358392,
+   "lift_off_g": 5.973595093152791,
+   "lateral_g": 6.746394915229628,
+   "push_top_fwd_mid_N": 5.002960954605071,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": 48.9,
+    "next = cabin corner fwd lean @1.0x": ">50",
+    "prev = windshield corner fwd lean @1.5x": ">50",
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 12.710260522776304,
+    "lift_off_g": 9.789497810671259,
+    "pinch_Nmm": 542.3534237590831,
+    "push_top_fwd_mid_N": 8.551593458638296
+   },
+   "hot90": {
+    "braking_g": 7.264674215735955,
+    "lift_off_g": 5.846511362549576
+   },
+   "mu_box_low": {
+    "lift_off_g": 5.288200476479495,
+    "pinch_Nmm": 272.3268787627231
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 3.5140307662442507,
+    "lift_off_g": 5.951985857139721
+   },
+   "tab_pull_80C": 4.0173302222004965,
+   "tab_down_80C": 1.4644743010521282,
+   "weight_N": 1.00529743008731,
+   "mass_g": 102.4768022515097,
+   "cog": [
+    12.71942660414055,
+    7.115036125387606,
+    7.582784899552239
+   ]
+  },
+  "v3.3 du 2.25": {
+   "documented": 4.715403449352417,
+   "vertical": 8.49306683604809,
+   "pinch": 8.27819535365225,
+   "pinch_Nmm": 321.0872512955209,
+   "switch_torque": 38.78710728345649,
+   "braking_g": 7.3897392839882174,
+   "lift_off_g": 6.136034045886968,
+   "lateral_g": 6.854359727447911,
+   "push_top_fwd_mid_N": 4.97350926679952,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": 48.9,
+    "next = cabin corner fwd lean @1.0x": ">50",
+    "prev = windshield corner fwd lean @1.5x": ">50",
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 12.673732683431908,
+    "lift_off_g": 10.095916976173102,
+    "pinch_Nmm": 550.5802320776454,
+    "push_top_fwd_mid_N": 8.529790365211628
+   },
+   "hot90": {
+    "braking_g": 7.219670554128284,
+    "lift_off_g": 6.004799726479796
+   },
+   "mu_box_low": {
+    "lift_off_g": 5.478028949700182,
+    "pinch_Nmm": 276.8216217672698
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 3.42545369634491,
+    "lift_off_g": 6.112951108257396
+   },
+   "tab_pull_80C": 3.8588368818732968,
+   "tab_down_80C": 1.6115429165173902,
+   "weight_N": 1.0052974300873099,
+   "mass_g": 102.47680225150968,
+   "cog": [
+    12.719426604140555,
+    7.115036125387604,
+    7.601679154033325
+   ]
+  },
+  "v3.3 du 1.75, lid Z -8.5": {
+   "documented": 4.548132197233096,
+   "vertical": 8.09576993613869,
+   "pinch": 7.865695543499052,
+   "pinch_Nmm": 305.0875769047033,
+   "switch_torque": 38.78710728345649,
+   "braking_g": 7.386218104916903,
+   "lift_off_g": 5.680323422421015,
+   "lateral_g": 6.50244264232606,
+   "push_top_fwd_mid_N": 4.969523190881555,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": 48.8,
+    "next = cabin corner fwd lean @1.0x": ">50",
+    "prev = windshield corner fwd lean @1.5x": ">50",
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 12.576148779760816,
+    "lift_off_g": 9.242008228593553,
+    "pinch_Nmm": 520.1033689809083,
+    "push_top_fwd_mid_N": 8.46136170436051
+   },
+   "hot90": {
+    "braking_g": 7.216245445612366,
+    "lift_off_g": 5.560733276900424
+   },
+   "mu_box_low": {
+    "lift_off_g": 4.974177357065672,
+    "pinch_Nmm": 260.7977745903831
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 3.5780988990472533,
+    "lift_off_g": 5.660932081055797
+   },
+   "tab_pull_80C": 4.136447337975774,
+   "tab_down_80C": 1.2561700633837323,
+   "weight_N": 1.00529743008731,
+   "mass_g": 102.4768022515097,
+   "cog": [
+    12.71942660414055,
+    7.115036125387606,
+    7.582784899552239
+   ]
+  },
+  "v3.3 du 1.75, lid Z -9.5": {
+   "documented": 4.779716755003762,
+   "vertical": 8.584021664904373,
+   "pinch": 8.412396973130994,
+   "pinch_Nmm": 326.2925439078565,
+   "switch_torque": 38.78710728345649,
+   "braking_g": 7.4181388251926625,
+   "lift_off_g": 6.217320662840878,
+   "lateral_g": 6.932792280039894,
+   "push_top_fwd_mid_N": 4.990999778416172,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": 48.9,
+    "next = cabin corner fwd lean @1.0x": ">50",
+    "prev = windshield corner fwd lean @1.5x": ">50",
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 12.735725735602228,
+    "lift_off_g": 10.26634782053345,
+    "pinch_Nmm": 560.7206924279802,
+    "push_top_fwd_mid_N": 8.568726714643141
+   },
+   "hot90": {
+    "braking_g": 7.247350537727769,
+    "lift_off_g": 6.084009333476658
+   },
+   "mu_box_low": {
+    "lift_off_g": 5.558736470887915,
+    "pinch_Nmm": 281.71508532982676
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 3.416852089272953,
+    "lift_off_g": 6.193720661063963
+   },
+   "tab_pull_80C": 3.862667792796192,
+   "tab_down_80C": 1.6566568838901479,
+   "weight_N": 1.00529743008731,
+   "mass_g": 102.4768022515097,
+   "cog": [
+    12.71942660414055,
+    7.115036125387606,
+    7.582784899552239
+   ]
+  },
+  "v3.3 du 1.75, lid weakest, base typical": {
+   "documented": 5.759711719136916,
+   "vertical": 9.9835405443265,
+   "pinch": 10.073433753556577,
+   "pinch_Nmm": 390.7193557119908,
+   "switch_torque": 38.78710728345649,
+   "braking_g": 8.824331279748039,
+   "lift_off_g": 6.996858009401765,
+   "lateral_g": 8.022486946008152,
+   "push_top_fwd_mid_N": 5.937100464111294,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": 49.7,
+    "next = cabin corner fwd lean @1.0x": ">50",
+    "prev = windshield corner fwd lean @1.5x": ">50",
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 10.322180181123677,
+    "lift_off_g": 8.10713457228393,
+    "pinch_Nmm": 458.0668841895443,
+    "push_top_fwd_mid_N": 6.944868545975485
+   },
+   "hot90": {
+    "braking_g": 8.617612406917038,
+    "lift_off_g": 6.843628188023385
+   },
+   "mu_box_low": {
+    "lift_off_g": 6.13515666106907,
+    "pinch_Nmm": 336.3374925393094
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 4.19483014077944,
+    "lift_off_g": 6.971347438932149
+   },
+   "tab_pull_80C": 5.049273024980299,
+   "tab_down_80C": 1.6954058196356074,
+   "weight_N": 1.00529743008731,
+   "mass_g": 102.4768022515097,
+   "cog": [
+    12.71942660414055,
+    7.115036125387606,
+    7.582784899552239
+   ]
+  },
+  "v3.3 du 1.75, lid weakest, base strongest": {
+   "documented": 7.562449972818526,
+   "vertical": 11.739799584759316,
+   "pinch": 13.015973628579445,
+   "pinch_Nmm": 504.85196553035144,
+   "switch_torque": 38.78710728345649,
+   "braking_g": 11.532333623808741,
+   "lift_off_g": 8.014071585400881,
+   "lateral_g": 9.777748999517467,
+   "push_top_fwd_mid_N": 7.759072176646131,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": ">50",
+    "next = cabin corner fwd lean @1.0x": ">50",
+    "prev = windshield corner fwd lean @1.5x": ">50",
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 13.53155032981256,
+    "lift_off_g": 9.312678168954964,
+    "pinch_Nmm": 593.3303531250019,
+    "push_top_fwd_mid_N": 9.104165652490028
+   },
+   "hot90": {
+    "braking_g": 11.256420730572009,
+    "lift_off_g": 7.834850244078262
+   },
+   "mu_box_low": {
+    "lift_off_g": 6.692219603554367,
+    "pinch_Nmm": 430.9472481055714
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 5.860098982821929,
+    "lift_off_g": 7.989078049905089
+   },
+   "tab_pull_80C": 7.733219862603675,
+   "tab_down_80C": 1.3569791354918748,
+   "weight_N": 1.00529743008731,
+   "mass_g": 102.4768022515097,
+   "cog": [
+    12.71942660414055,
+    7.115036125387606,
+    7.582784899552239
+   ]
+  },
+  "v3.3 du 1.75, lid weakest, base weakest": {
+   "documented": 4.6831833244716075,
+   "vertical": 8.376616466653116,
+   "pinch": 8.171631374185475,
+   "pinch_Nmm": 316.953942791391,
+   "switch_torque": 38.78710728345649,
+   "braking_g": 7.435916759358392,
+   "lift_off_g": 5.973595093152791,
+   "lateral_g": 6.746394915229628,
+   "push_top_fwd_mid_N": 5.002960954605071,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": 48.9,
+    "next = cabin corner fwd lean @1.0x": ">50",
+    "prev = windshield corner fwd lean @1.5x": ">50",
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 8.676710366255293,
+    "lift_off_g": 6.894421642078301,
+    "pinch_Nmm": 370.64431797489226,
+    "push_top_fwd_mid_N": 5.837779601575028
+   },
+   "hot90": {
+    "braking_g": 7.264674215735955,
+    "lift_off_g": 5.846511362549576
+   },
+   "mu_box_low": {
+    "lift_off_g": 5.288200476479495,
+    "pinch_Nmm": 272.3268787627231
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 3.5140307662442507,
+    "lift_off_g": 5.951985857139721
+   },
+   "tab_pull_80C": 4.0173302222004965,
+   "tab_down_80C": 1.4644743010521282,
+   "weight_N": 1.00529743008731,
+   "mass_g": 102.4768022515097,
+   "cog": [
+    12.71942660414055,
+    7.115036125387606,
+    7.582784899552239
+   ]
+  },
+  "v3.3 du 1.75 +couples": {
+   "documented": 4.6162961259038315,
+   "vertical": 8.393221476396583,
+   "pinch": 8.007418392441492,
+   "pinch_Nmm": 310.5845962511509,
+   "switch_torque": 38.78710728345649,
+   "braking_g": 7.544974456696085,
+   "lift_off_g": 5.973595093152844,
+   "lateral_g": 6.7463949152296285,
+   "push_top_fwd_mid_N": 5.076336090346464,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": 48.9,
+    "next = cabin corner fwd lean @1.0x": ">50",
+    "prev = windshield corner fwd lean @1.5x": ">50",
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 12.9464442051317,
+    "lift_off_g": 9.789497810671236,
+    "pinch_Nmm": 528.5594802154804,
+    "push_top_fwd_mid_N": 8.7105002591282
+   },
+   "hot90": {
+    "braking_g": 7.370945305243881,
+    "lift_off_g": 5.846511362549535
+   },
+   "mu_box_low": {
+    "lift_off_g": 5.288152405362714,
+    "pinch_Nmm": 265.957532222484
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 3.594853646536773,
+    "lift_off_g": 5.951985857139721
+   },
+   "tab_pull_80C": 4.0173302222004965,
+   "tab_down_80C": 1.4644743010521282,
+   "weight_N": 1.00529743008731,
+   "mass_g": 102.4768022515097,
+   "cog": [
+    12.71942660414055,
+    7.115036125387606,
+    7.582784899552239
+   ]
+  },
+  "v3.2 package +couples": {
+   "documented": 2.415884698641325,
+   "vertical": 4.172507394445205,
+   "pinch": 4.265936314607623,
+   "pinch_Nmm": 165.46328156811546,
+   "switch_torque": 38.78709604771365,
+   "braking_g": 3.533006115181665,
+   "lift_off_g": 3.299327366215003,
+   "lateral_g": 3.605801937496422,
+   "push_top_fwd_mid_N": 2.3097563964507684,
+   "lean_limits": {
+    "next = cabin corner fwd lean @1.5x": 44.4,
+    "next = cabin corner fwd lean @1.0x": 47.2,
+    "prev = windshield corner fwd lean @1.5x": 46.4,
+    "prev = windshield corner fwd lean @1.0x": ">50"
+   },
+   "typical_20C": {
+    "braking_g": 5.661680639157343,
+    "lift_off_g": 4.964219962069043,
+    "pinch_Nmm": 269.974767454972,
+    "push_top_fwd_mid_N": 3.701409690394134
+   },
+   "hot90": {
+    "braking_g": 3.4614894361613757,
+    "lift_off_g": 3.2405756797380025
+   },
+   "mu_box_low": {
+    "lift_off_g": 2.970202260445813,
+    "pinch_Nmm": 144.48373317315804
+   },
+   "no_pads": {
+    "push_top_fwd_mid_N": 1.4961888284867455,
+    "lift_off_g": 3.2885328673788567
+   },
+   "tab_pull_80C": 1.8689649194961677,
+   "tab_down_80C": 0.6299098449600878,
+   "weight_N": 0.9671042561155856,
+   "mass_g": 98.58351234613514,
+   "cog": [
+    13.220047644696802,
+    7.544233880357247,
+    8.167673572843333
+   ]
+  }
+ },
+ "limits": {
+  "documented": 1.5,
+  "vertical": 2.0,
+  "pinch": 1.5,
+  "braking_g": 1.5,
+  "lift_off_g": 3.0
+ },
+ "seconds": 229.03503704071045
+}

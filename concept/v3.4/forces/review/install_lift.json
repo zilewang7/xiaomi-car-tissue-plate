@@ -1,0 +1,106 @@
+{
+ "convention": "20 C, both tabs, incl. plate weight and box-face friction mu 0.35",
+ "lift_hand_force_N": {
+  "v3.2 design": {
+   "weakest": {
+    "max_N": 4.35,
+    "at_dz": 0.75
+   },
+   "typical": {
+    "max_N": 6.02,
+    "at_dz": 1.0
+   },
+   "strongest": {
+    "max_N": 10.48,
+    "at_dz": 3.0
+   }
+  },
+  "v3.2 as built": {
+   "weakest": {
+    "max_N": 5.65,
+    "at_dz": 1.75
+   },
+   "typical": {
+    "max_N": 8.37,
+    "at_dz": 2.0
+   },
+   "strongest": {
+    "max_N": 16.09,
+    "at_dz": 2.25
+   }
+  },
+  "v3.3": {
+   "weakest": {
+    "max_N": 9.07,
+    "at_dz": 1.25
+   },
+   "typical": {
+    "max_N": 13.48,
+    "at_dz": 1.5
+   },
+   "strongest": {
+    "max_N": 25.83,
+    "at_dz": 2.5
+   }
+  }
+ },
+ "v3.3_install_numbers": {
+  "weakest": {
+   "sliding_down_outward_total_N": 5.7,
+   "at_dz": 9.5,
+   "sliding_down_outward_lower_stack_per_tab_N": 2.69,
+   "lower_at_dz": 9.5,
+   "sliding_down_outward_upper_stack_per_tab_N": 0.17,
+   "upper_at_dz": 8.25,
+   "pushed_up_band_dz": [
+    11.25,
+    18.5
+   ],
+   "max_up_N": 2.4,
+   "hand_down_extra_N": 1.37,
+   "forward_pull_hand_force_N": 12.92,
+   "seated_attraction_N": 8.45,
+   "peel_one_end_N": 4.47
+  },
+  "typical": {
+   "sliding_down_outward_total_N": 8.64,
+   "at_dz": 9.25,
+   "sliding_down_outward_lower_stack_per_tab_N": 4.03,
+   "lower_at_dz": 9.5,
+   "sliding_down_outward_upper_stack_per_tab_N": 0.31,
+   "upper_at_dz": 8.5,
+   "pushed_up_band_dz": [
+    11.0,
+    20.0
+   ],
+   "max_up_N": 3.66,
+   "hand_down_extra_N": 2.63,
+   "forward_pull_hand_force_N": 19.27,
+   "seated_attraction_N": 13.03,
+   "peel_one_end_N": 6.62
+  },
+  "strongest": {
+   "sliding_down_outward_total_N": 15.44,
+   "at_dz": 10.25,
+   "sliding_down_outward_lower_stack_per_tab_N": 6.93,
+   "lower_at_dz": 10.0,
+   "sliding_down_outward_upper_stack_per_tab_N": 0.79,
+   "upper_at_dz": 10.25,
+   "pushed_up_band_dz": [
+    12.0,
+    20.0
+   ],
+   "max_up_N": 7.37,
+   "hand_down_extra_N": 6.34,
+   "forward_pull_hand_force_N": 34.29,
+   "seated_attraction_N": 24.59,
+   "peel_one_end_N": 11.63
+  }
+ },
+ "cog_vs_lid_front_edge": {
+  "cog_y_seated": 7.115,
+  "lid_flat_front_edge_y": 2.5,
+  "cog_passes_edge_at_dy": -4.62,
+  "note": "dy < this: the centre of gravity is in front of the lid-top flat; the tab attraction (below the edge) and the tab down force (in front of it) both add to the forward tipping moment"
+ }
+}

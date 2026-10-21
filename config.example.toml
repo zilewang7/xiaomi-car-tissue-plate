@@ -1,0 +1,61 @@
+# Parking plate v3.4 - local settings (keys: v3.4 design doc, sections 5.5 and 6.3; older keys: v3.3 doc A.5).
+# Copy to config.toml (gitignored) and put your own numbers or texts there. Never upload config.toml or any
+# 3MF / STL / STEP / G-code / render that contains them.
+
+[numbers]          # local only, never upload; 11 digits starting with 1, quoted
+a = "13800138000"  # face A (shown first)
+b = "13900139000"  # face B
+
+# [text]                   # optional, local only like [numbers]: one line of text on a face instead of its number
+# b = "MOVE MY CAR? CALL"  # face B: then remove b from [numbers] (each face is set exactly once)
+# b = "+00 0000 0000"      # other formats: group with spaces or '-' yourself; a mainland mobile number stays in
+#                          # [numbers] (text has no 3-4-4 grouping and prints differently)
+# b = "临时停车请联系我"     # Chinese: up to about 8-9 characters; never test-printed (README)
+# l = "YU7 MAX"            # face L: replaces "YU7 PRO" beside the sketch (omit = "YU7 PRO" as today); with
+#                          # [display] logo = "none" face L carries only this line (advised for Chinese)
+# The largest font size that fits is picked, a long line is condensed to 0.86 first; errors name the character
+# position (the text itself is never printed).
+
+[display]
+logo = "final"           # YU7 side sketch + continuous trails + "YU7 PRO" (4.6); spec 7's "speed_dramatic" = same art;
+                         # "none": no sketch, face L carries only [text] l
+condense = 0.86          # digit width factor; digits are never shrunk to fit (error instead)
+white_layers = 4         # white inlay depth = layers x 0.2 mm (plate-0 test 4 picks 3 / 4 / 5)
+layout = "proportional"  # ink gap 2.8, group gap <= 9; "fixed" = fixed cells
+
+[mount]
+stack = 2          # magnets per stack (lower and upper stack of each tab); v3.3: 2 only, no stack-1 fallback
+delta_up = 2.45    # lower / upper stack centres above the base / lid magnet points (as built: 1.75 + 0.7)
+tab_bottom = -39.3 # as built: -40 + 0.7 (clearance -40 measured in the author's YU7; -35 / -30 still OK)
+pad_t = 1.2        # 3M VHB double-sided tape under the lip, stuck on both sides (0.5 .. 1.5)
+# pad_t, delta_up and tab_bottom change together. The two sets the parts are drawn for give the same printed
+# parts (only the card and the report differ):
+#   1.2 mm tape (as built): pad_t = 1.2, delta_up = 2.45, tab_bottom = -39.3
+#   0.5 mm pads (v3.3):     pad_t = 0.5, delta_up = 1.75, tab_bottom = -40
+# Changing one alone silently changes F (tab length, pocket heights).
+
+[detent]
+knob_stack = 2     # v3.4 supports only 2
+boss_h = 0.6       # v3.4 supports only 0.6 (two 0.8 floors may creep 0.12 each)
+
+[box]              # mm, measured on the author's box (XIAOMI LIFE magnetic tissue box)
+skirt = 13.62
+mag_from_end = 47.04
+mag_below_top = 21.07
+lid_mag_below_top = 9.0  # lid magnet centre below the lid top; the upper stack sits delta_up above it. Buildable
+                         # 8.8 .. 11.55 with these box and mount values; outside that the upper pocket needs a new analysis
+top_fillet = 2.5   # estimate
+
+[fit]              # defaults = the author's plate-0 / 0b picks. A part that does not fit: change its key and
+                   # reprint only that part (README table; small parts always with the cooling tube Q)
+near_hole = 5.90   # cradle C: the knob journal turns freely in it (5.85 .. 6.35); tight: ream first, then +0.05
+far_hole = 5.95    # cradle C: the far pin journal turns in it, 0.05 looser than near_hole (5.85 .. 6.35); same
+far_hex_af = 5.05  # far pin P: hex into the EF socket AF 5.20 (4.95 .. 5.05); does not go in: -0.05
+hex_socket_af = 5.20  # near plug EN: socket of the knob hex (5.15 .. 5.30); the knob does not go in: +0.05
+hex_af = 5.00      # knob K: hex into EN (5.00 .. 5.10); wobbles: +0.05
+tab_cap_d = 8.25   # tab caps (8.15 .. 8.25); too tight: -0.05 (loose: glue them, 8.25 is the maximum)
+knob_cap_d = 8.25  # knob caps, same rule (8.15 .. 8.25)
+hub_cap_d = 6.40   # hub cap (6.25 .. 6.40; 6.45 overlaps the counterbore); too tight: -0.05
+
+[hardware]
+screw_head_k = 2.4 # M3 x 25 pan head height; knob counterbore = k + 0.2 + 0.8 hub cap, >= 3.0 (1.6 .. 2.8)

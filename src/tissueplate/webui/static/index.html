@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="google" content="notranslate">
+  <title>挪车号码牌 · 本机生成器</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div id="notice" class="notice">
+    <span>ⓘ 这套牌子只在作者的 YU7 里装车验证过；SU7 车主（用磁吸适配托盘）打正式件前，先按 README「适用车型」在车里查三项。
+      打印设置按 P1S 0.4 + AMS（1 白、2 天蓝、3 藏青）+ ABS。</span>
+    <button id="notice-hide" type="button" class="link">收起</button>
+  </div>
+  <header>
+    <h1>挪车号码牌 · 本机生成器</h1>
+    <span id="badge-bambu" class="badge">检测 Bambu Studio…</span>
+    <span id="badge-font" class="badge">检测字体…</span>
+    <span class="badge ok">号码不出这台电脑</span>
+    <span id="badge-example" class="badge hidden">示例模式</span>
+    <button id="stop" type="button" class="danger">停止</button>
+  </header>
+  <p id="token-missing" class="banner bad hidden">访问令牌缺失或已失效：请用终端里打印的完整链接打开本页（每次启动都换一个新令牌）。</p>
+  <div id="font-missing" class="banner hidden">
+    <b>缺字体</b>：从 <span id="font-url"></span> 下载 MiSans，把 <code>MiSans-Bold.ttf</code> 放进仓库的 <code>fonts/</code>
+    文件夹（字体协议不允许仓库附带它）。
+    <button id="font-folder" type="button">打开 fonts 文件夹</button>
+    <button id="font-recheck" type="button">重新检测</button>
+  </div>
+  <p id="font-other" class="banner warn hidden">字体文件和作者用的 MiSans 4.009 不一样：排版可能略有差别（不影响使用）。</p>
+  <p id="platform-warning" class="banner warn hidden"></p>
+  <p id="stopped" class="banner bad hidden">服务器已停止，可以关掉这个标签页。要再用，重新运行启动脚本。</p>
+  <main>
+    <section id="settings">
+      <div class="toolbar">
+        <button id="config-read" type="button">从 config.toml 读取</button>
+        <button id="config-save" type="button">保存到 config.toml</button>
+        <label class="button">导入…<input id="import-file" type="file" accept=".toml,text/plain" hidden></label>
+        <button id="config-export" type="button" title="导出的 config.toml 带号码和文字：用完删掉">导出…</button>
+        <button id="defaults" type="button" title="号码和文字不动">恢复默认</button>
+      </div>
+      <div id="messages" class="messages"></div>
+      <fieldset id="faces">
+        <legend>三面</legend>
+        <div class="face-row" data-face="a">
+          <span class="face-title">A 面</span>
+          <label><input type="radio" name="mode-a" value="number" checked> 号码</label>
+          <label><input type="radio" name="mode-a" value="text"> 文字</label>
+          <input id="face-a" class="secret" type="text" autocomplete="off" autocorrect="off" autocapitalize="off"
+                 spellcheck="false" data-gramm="false" data-lpignore="true" placeholder="13800138000">
+          <span class="field-message"></span>
+        </div>
+        <div class="face-row" data-face="b">
+          <span class="face-title">B 面</span>
+          <label><input type="radio" name="mode-b" value="number" checked> 号码</label>
+          <label><input type="radio" name="mode-b" value="text"> 文字</label>
+          <input id="face-b" class="secret" type="text" autocomplete="off" autocorrect="off" autocapitalize="off"
+                 spellcheck="false" data-gramm="false" data-lpignore="true" placeholder="13900139000">
+          <span class="field-message"></span>
+        </div>
+        <div class="face-row" data-face="l">
+          <span class="face-title">L 面</span>
+          <label><input type="radio" name="logo" value="final" checked> YU7 侧影</label>
+          <label><input type="radio" name="logo" value="none"> 只放文字</label>
+          <input id="face-l" class="secret" type="text" autocomplete="off" autocorrect="off" autocapitalize="off"
+                 spellcheck="false" data-gramm="false" data-lpignore="true" placeholder="YU7 PRO">
+          <span class="field-message"></span>
+        </div>
+        <p class="help">号码：11 位、1 开头，按 3-4-4 排。文字：一行，最大的放得下的字号，太长先压缩到 0.86。L 面文字空着就是 YU7 PRO；
+          「只放文字」时必填。SU7 车主建议 L 面选「只放文字」。</p>
+      </fieldset>
+      <div id="form"></div>
+    </section>
+    <section id="results">
+      <h2>预览 <small>从车外看，旋钮端在右；黄虚线是可用区域</small></h2>
+      <div class="preview" data-face="A"><span class="preview-name">A</span><div class="preview-image" role="img" aria-label="A 面预览"></div><div class="facts"></div></div>
+      <div class="preview" data-face="B"><span class="preview-name">B</span><div class="preview-image" role="img" aria-label="B 面预览"></div><div class="facts"></div></div>
+      <div class="preview" data-face="L"><span class="preview-name">L</span><div class="preview-image" role="img" aria-label="L 面预览"></div><div class="facts"></div></div>
+      <h2>构建 <small>约 2.5–3.5 分钟；同一时间只跑一个</small></h2>
+      <div class="toolbar">
+        <button id="build" type="button" class="primary" disabled>开始构建</button>
+        <button id="cancel" type="button" disabled>取消</button>
+        <span id="build-hint" class="muted"></span>
+      </div>
+      <div class="progress"><div id="bar"></div></div>
+      <p id="stage" class="muted">还没有构建</p>
+      <details id="log-box"><summary>日志</summary><pre id="log" class="log"></pre></details>
+      <h2>产物 <small id="job-name"></small></h2>
+      <div id="outputs" class="muted">构建完成后在这里打开。</div>
+      <div id="renders" class="renders"></div>
+      <pre id="viewer" class="viewer hidden"></pre>
+      <h2>历史 <small id="history-rule"></small></h2>
+      <ul id="jobs" class="jobs"></ul>
+    </section>
+  </main>
+  <footer>本工具使用 MiSans 字体（© 小米），字体文件要自己从官网下载。</footer>
+  <dialog id="confirm">
+    <p id="confirm-text"></p>
+    <div class="toolbar"><button id="confirm-yes" type="button" class="primary">确定</button>
+      <button id="confirm-no" type="button">取消</button></div>
+  </dialog>
+</body>
+</html>
